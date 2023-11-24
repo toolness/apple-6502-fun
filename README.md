@@ -3,7 +3,7 @@ and running 6502 assembly programs on an Apple II using a Mac.
 
 ## Prerequisites
 
-1. Get [Virtual II][]
+1. Get [Virtual II][].
 2. Install Java 11 (e.g., `brew install openjdk@11`). Sadly
    this is required to run [AppleCommander], which builds disk
    images for us.
@@ -23,7 +23,11 @@ Now in a terminal, run `./compile [program]` where program is the
 base name (without the trailing `.s` or the directory name) of
 a file in the `src` directory.
 
-For example, `./compile printa` will build and run `src/printa.s`.
+For example, `./compile printa` will act upon `src/printa.s`.
+
+This will compile the program, put its binary in a disk at
+`disks/boop.dsk`, insert the disk into drive 2 of your
+Apple VM, and run the program (which is always called `BOOP`).
 
 ## Other resources
 
