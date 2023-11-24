@@ -8,6 +8,7 @@ tell application "Virtual ]["
 	tell front machine
 		eject device "S6D2"
 		insert theDisk into device "S6D2"
-		type line "BRUN BOOP,D2"
+		type line "BLOAD BOOP,D2"
+		type line "CALL 768"
 	end tell
 end tell
