@@ -1,4 +1,4 @@
-This is Atuls' convoluted build pipeline for cross-assembling
+This is Atul's convoluted build pipeline for cross-assembling
 and running 6502 assembly programs on an Apple II using a Mac.
 
 ## Prerequisites
