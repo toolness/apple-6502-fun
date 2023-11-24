@@ -24,3 +24,15 @@ base name (without the trailing `.s` or the directory name) of
 a file in the `src` directory.
 
 For example, `./compile printa` will build and run `src/printa.s`.
+
+## Other resources
+
+* [Assembly Lines: The Complete Book (2014)](https://archive.org/details/AssemblyLinesCompleteWagner/page/n211/mode/2up) - A compilation of all the tutorials Robert Wagner wrote for Softalk magazine in the early 1980s. Following these tutorials is the main reason I started this repository.
+
+* [Apple II Reference Manual (1979)](https://archive.org/details/apple-ii-ref-manual/mode/2up) - I think this came with all new Apple II computers. I think it's recommended near the beginning of Assembly Lines.
+
+* [The Apple II Monitor Peeled (1979, PDF)](https://mirrors.apple2.org.za/Apple%20II%20Documentation%20Project/Books/A.P.P.L.E.%20-%20Dougherty%20-%20The%20Apple%20II%20Monitor%20Peeled.pdf) - I think this is recommended near the beginning of Assembly Lines.
+
+* [Apple II BASIC Programming Manual (1978, PDF)](http://cini.classiccmp.org/pdf/Apple/Apple%20II%20Basic%20Programming%20Manual.pdf) - Jef Raskin's guide to BASIC programming. Assembly Lines assumes familiarity with BASIC, so this is useful as a refresher, among other things.
+
+* [Apple II DOS & Commands FAQ](https://mirrors.apple2.org.za/ftp.apple.asimov.net/documentation/programming/basic/Apple%20II%20DOS%20%26%20Commands%20FAQ.txt) - DOS is some kind of weird BASIC with extra commands, this makes everything less confusing.
