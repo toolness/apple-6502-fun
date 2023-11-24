@@ -1,0 +1,17 @@
+#! /usr/bin/env bash
+
+set -e
+
+if [ "$#" -eq 0 ]; then
+  echo "No arguments provided, see README.md for help."
+  exit 1
+fi
+
+merlin32 src/$1.s
+mkdir -p build
+mv -f src/$1 build/boop
+mv -f src/_FileInformation.txt build
+java -jar jar/ac.jar -dos140 disks/boop.dsk
+java -jar jar/ac.jar -p disks/boop.dsk boop B 0x300 < build/boop
+osacompile -o run.scpt run.applescript
+osascript run.scpt
