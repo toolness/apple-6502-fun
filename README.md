@@ -1,6 +1,8 @@
 This is Atul's convoluted build pipeline for cross-assembling
 and running 6502 assembly programs on an Apple II using a Mac.
 
+See [Rationale][#rationale] for more details on why I made this.
+
 ## Prerequisites
 
 1. Get [Virtual II][].
@@ -28,6 +30,39 @@ For example, `./compile printa` will act upon `src/printa.s`.
 This will compile the program, put its binary in a disk at
 `disks/boop.dsk`, insert the disk into drive 2 of your
 Apple VM, and run the program (which is always called `BOOP`).
+
+## Rationale
+
+I was working through the tutorials in Robert Wagner's _Assembly Lines_
+articles from the early 1980s and had a few issues with running
+Merlin on the Apple II:
+
+* It seemed like all the versions of Merlin I could find online were
+  from a different time period than the original tutorials were
+  written. Some things the tutorial told me to do weren't working
+  at all.
+
+* Even once I stumbled into getting _something_ working with Merlin,
+  modifying my code and seeing its effects took a lot of keystrokes.
+
+  At first I thought I was just spoiled by the conveniences of
+  modern development, but then I realized that even Integer BASIC
+  on the Apple II makes it easy to iterate on one's code--once you're
+  done modifying things you just type `RUN` and you can see its effects.
+
+  But with Merlin, I had to switch through multiple different modes in the
+  program to compile my code, manually load the binary into the
+  proper region in memory, and then run it. It was all a bit of a
+  hassle and quite error-prone.
+
+* Even though I theoretically liked the idea of fully role-playing
+  a computer programmer from 1982, I wasn't terribly interested in
+  becoming fluent with Merlin, which was an extremely primitive
+  code editor by today's standards.
+
+So even though this pipeline I've made is a bit overkill, at
+least it makes it possible for me to get in a flow state with
+my code and quickly try things out.
 
 ## Other resources
 
