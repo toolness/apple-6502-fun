@@ -15,9 +15,9 @@ and running 6502 assembly programs on an Apple II using a Mac.
 
 ## Building and running programs
 
-Set up a Virtual II machine running an Apple II+ and put DOS 3.3
-(included in the `disks` subdirectory) in disk drive 1. Make sure
-it's currently running.
+Set up a Virtual II machine running an Apple II+ (IIe is okay too)
+and put DOS 3.3 (included in the `disks` subdirectory) in disk
+drive 1. Make sure it's currently running.
 
 Now in a terminal, run `./compile [program]` where program is the
 base name (without the trailing `.s` or the directory name) of
