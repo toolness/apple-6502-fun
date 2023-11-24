@@ -1,4 +1,6 @@
-    ORG $300
-    LDA #$D
-    JSR $FDDA   ; PRBYTE, print a hexadecimal byte
-    RTS
+	ORG $300
+
+START	LDA #$D     ; Just a random value to print out.
+	JSR $FDDA   ; PRBYTE, print hex of 'A' register.
+
+END	RTS
