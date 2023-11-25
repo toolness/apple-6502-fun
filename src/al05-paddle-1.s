@@ -1,10 +1,10 @@
 * AL05-PADDLE PROGRAM 1 from Assembly Lines, pg. 32
 
 * Note that running this on Virtual ][ requries paddle config.
-* Easiest way to do this is to click "Setup" in toolbar, under
-* "Built-in connections -> Game connector" choose
-* "Use arrows as a joystick substitute". This isn't ideal
-* because it only sends 3 discrete values, but it's something.
+* Easiest way to do this is to use the pull-down menu option
+* "Quick settings -> Use Arrows as Joystick".
+* This isn't ideal because it only sends 3 discrete values,
+* but it's better than nothing.
 
 	ORG $300
 TEMP	EQU $06		; Address in zero-page for temp var
