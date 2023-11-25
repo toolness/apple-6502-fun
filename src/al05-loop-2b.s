@@ -1,0 +1,18 @@
+* AL05-LOOP PROGRAM 2B from Assembly Lines, pg. 30
+
+	ORG $300
+CTR	EQU $06		; Location of counter in zero page
+HOME	EQU $FC58
+COUT	EQU $FDED
+
+START	JSR HOME
+	LDA #$FF
+	STA CTR		; Set CTR to 255
+
+LOOP	LDA CTR
+	JSR COUT
+	DEC CTR
+	BEQ END
+	JMP LOOP
+
+END	RTS
