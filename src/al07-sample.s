@@ -1,0 +1,18 @@
+* AL07-SAMPLE DATA PROGRAM from Assembly Lines, pg. 48
+
+	ORG $300
+
+COUT	EQU $FDED
+
+START	LDX #$00
+
+LOOP	LDA DATA,X
+	JSR COUT
+	INX
+	CPX #$05	; # of chars in 'APPLE'
+	BCC LOOP
+	LDA #$8D	; carriage return
+	JSR COUT
+EXIT	RTS
+
+DATA	HEX C1D0D0CCC5	; 'APPLE'
