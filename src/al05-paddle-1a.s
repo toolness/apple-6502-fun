@@ -1,4 +1,4 @@
-* AL05-PADDLE PROGRAM 1 from Assembly Lines, pg. 32
+* AL05-PADDLE PROGRAM 1A from Assembly Lines, pg. 34
 
 * Note that running this on Virtual ][ requries paddle config.
 * Easiest way to do this is to use the pull-down menu option
