@@ -1,7 +1,7 @@
 This is Atul's convoluted build pipeline for cross-compiling
 and running 6502 assembly programs on an Apple II using a Mac.
 
-See [Rationale][#rationale] for more details on why I made this.
+See [Rationale](#rationale) for more details on why I made this.
 
 ## Prerequisites
 
