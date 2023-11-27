@@ -35,5 +35,3 @@ LOOP	DEY
 	BNE NOTE
 
 END	RTS
-
-* INFINITE LOOP (Press "Reset" in Virtual ][ to abort)
