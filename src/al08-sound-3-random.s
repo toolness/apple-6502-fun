@@ -1,5 +1,5 @@
 * This is based on al08-sound-3.s but infinitely plays
-* random notes.
+* random notes of equal length.
 
 	ORG $300
 
@@ -11,7 +11,7 @@ RND	EQU $EFAE
 FAC	EQU $A1		; Near end of FAC, seems random.
 PRBYTE	EQU $FDDA
 
-MYDUR	EQU 2
+MYDUR	EQU 10		; Lower values = faster notes!
 
 NXTNOTE	JSR RND
 	LDA FAC
@@ -23,11 +23,12 @@ NXTNOTE	JSR RND
 NOTE	LDX #DURSIZE
 INNER	LDY PITCH
 	LDA SPKR
-LOOP	DEY
+LOOP	DEX
+	BEQ NXTDUR
+	DEY
 	BNE LOOP
-	DEX
-	BNE INNER
-	LDX DUR
+	JMP INNER
+NXTDUR	LDX DUR
 	DEX
 	STX DUR
 	BNE NOTE
