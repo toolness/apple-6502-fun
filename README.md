@@ -22,7 +22,9 @@ and put DOS 3.3 (included in the `disks` subdirectory) in disk
 drive 1. Make sure it's currently running and at the BASIC/DOS
 prompt (you should see `]` followed by a blinking cursor).
 
-Now in a terminal, run `./compile [program]` where program is the
+### Running assembly programs
+
+In a terminal, run `./compile [program]` where program is the
 base name (without the trailing `.s` or the directory name) of
 a file in the `src` directory.
 
@@ -31,6 +33,18 @@ For example, `./compile printa` will act upon `src/printa.s`.
 This will compile the program, put its binary in a disk at
 `disks/boop.dsk`, insert the disk into drive 2 of your
 Apple VM, and run the program (which is always called `BOOP`).
+
+### Running BASIC programs
+
+In a terminal, run `./basic [program]` where program is the
+base name (without the trailing `.bas` or the directory name) of
+a file in the `src` directory.
+
+For example, `./basic hello` will act upon `src/hello.bas`.
+
+This will put the BASIC file in a disk at `disks/basic.dsk`,
+insert the disk into drive 2 of your Apple VM, and run the
+program (which is always called `BASIC`).
 
 ## Rationale
 

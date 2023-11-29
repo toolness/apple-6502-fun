@@ -1,0 +1,13 @@
+#! /usr/bin/env bash
+
+set -e
+
+if [ "$#" -eq 0 ]; then
+  echo "No arguments provided, see README.md for help."
+  exit 1
+fi
+
+java -jar jar/ac.jar -dos140 disks/basic.dsk
+java -jar jar/ac.jar -bas disks/basic.dsk basic < src/$1.bas
+osacompile -o run-basic.scpt run-basic.applescript
+osascript run-basic.scpt
