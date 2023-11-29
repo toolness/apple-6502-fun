@@ -7,12 +7,14 @@
 * 
 * Once it breaks, you can click "Resume",
 * and you'll be taken to the Monitor. At
-* that point you can press CTRL-C and then
-* be sure to press CTRL-F12 (or click the
+* that point press CTRL-F12 (or click the
 * Reset button). If you don't do that last
-* step, it will look like you're in BASIC,
+* step, and press CTRL-B or CTRL-C instead,
+* it will look like you're in BASIC,
 * but in fact running DOS commands like
-* BLOAD will result in a syntax error!
+* BLOAD will result in a syntax error.
+* (Pressing Reset will always get you out
+* of that "barebones" BASIC mode.)
 
 	ORG $300
 
