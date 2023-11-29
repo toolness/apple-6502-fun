@@ -26,9 +26,12 @@ SETUP	LDA #1
 	CLC	; Clear the carry flag
 
 ; The following DATA will show up as BRK $00
-; in disassembly. Note that BRK is actually a
+; in Virtual ]['s disassembly, though it will
+; show up as two consecutive BRKs in Apple's
+; disassembler. It's confusing; BRK may actually be a
 ; two-byte instruction, it seems. More details here:
 ; https://retrocomputing.stackexchange.com/q/12291
+; Also, see pg. 356 of Assembly Lines.
 DATA	HEX 0000
 
 	RTS
