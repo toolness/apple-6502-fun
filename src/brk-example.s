@@ -32,6 +32,14 @@ SETUP	LDA #1
 ; two-byte instruction, it seems. More details here:
 ; https://retrocomputing.stackexchange.com/q/12291
 ; Also, see pg. 356 of Assembly Lines.
+;
+; My hope was that using BRK would be similar to
+; using `debugger` in JavaScript, but it seems
+; a lot more complex than that (specifically, I
+; haven't figured out how to make it resume from
+; where it paused execution). It seems like just
+; using Virtual ]['s breakpoint functionality
+; will be easier for now.
 DATA	HEX 0000
 
 	RTS
