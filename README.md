@@ -103,6 +103,8 @@ my code and quickly try things out.
 
 * [The Apple II Monitor Peeled (1979, PDF)](https://mirrors.apple2.org.za/Apple%20II%20Documentation%20Project/Books/A.P.P.L.E.%20-%20Dougherty%20-%20The%20Apple%20II%20Monitor%20Peeled.pdf) - Recommended in Assembly Lines chapter 3, "Assemblers".
 
+* [Beneath Apple DOS (1982, PDF)](https://mirrors.apple2.org.za/Apple%20II%20Documentation%20Project/Books/Beneath%20Apple%20DOS.pdf) - Recommended in Assembly Lines chapter 11, "DOS and Disk Access".
+
 * [Apple II BASIC Programming Manual (1978, PDF)](http://cini.classiccmp.org/pdf/Apple/Apple%20II%20Basic%20Programming%20Manual.pdf) - Jef Raskin's guide to BASIC programming. Assembly Lines assumes familiarity with BASIC, so this is useful as a refresher, among other things.
 
 * [Apple II DOS & Commands FAQ](https://mirrors.apple2.org.za/ftp.apple.asimov.net/documentation/programming/basic/Apple%20II%20DOS%20%26%20Commands%20FAQ.txt) - Apple DOS is some kind of weird BASIC with extra commands, this makes everything less confusing.
