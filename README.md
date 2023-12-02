@@ -46,6 +46,22 @@ This will put the BASIC file in a disk at `disks/basic.dsk`,
 insert the disk into drive 2 of your Apple VM, and run the
 program (which is always called `BASIC`).
 
+### Running hybrid BASIC + assembly programs
+
+In a terminal, run `./hybrid [program]` where program is the
+base name (without the trailing `.bas`/`.s` or the directory name) of
+a pair of files in the `src` directory.
+
+For example, `./hybrid al10-adc-5a` will act upon `src/al10-adc-5a.bas`
+and `src/al10-adc-5a.s`.
+
+This will compile the assembly program, put its binary and the BASIC
+file in a disk at `disks/hybrid.dsk`, insert the disk into drive 2
+of your Apple VM, load the assembly program (which is always called `BOOP`)
+into memory, and run the BASIC program (which is always called `BASIC`).
+It's expected that the BASIC program will call the assembly program
+as needed.
+
 ## Rationale
 
 I was working through the tutorials in Robert Wagner's _Assembly Lines_

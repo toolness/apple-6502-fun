@@ -1,0 +1,18 @@
+#! /usr/bin/env bash
+
+set -e
+
+if [ "$#" -eq 0 ]; then
+  echo "No arguments provided, see README.md for help."
+  exit 1
+fi
+
+merlin32 src/$1.s
+mkdir -p build
+mv -f src/$1 build/boop
+mv -f src/_FileInformation.txt build
+java -jar jar/ac.jar -dos140 disks/hybrid.dsk
+java -jar jar/ac.jar -p disks/hybrid.dsk boop B 0x300 < build/boop
+java -jar jar/ac.jar -bas disks/hybrid.dsk basic < src/$1.bas
+osacompile -o run-hybrid.scpt run-hybrid.applescript
+osascript run-hybrid.scpt
