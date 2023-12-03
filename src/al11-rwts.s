@@ -61,15 +61,15 @@ START	LDA #$02	; Track 2
 * runs of this program.
 	LDY #$FF
 	LDA #0
-NEXTDL	STA BUFFER,Y
+:NEXT	STA BUFFER,Y
 	DEY
-	BNE NEXTDL
+	BNE :NEXT
 
 * Load the sector from disk into the buffer.
 LOAD	JSR DISK
 	BCC PRINT	; Carry flag will be set if an error occurred.
 
-SHOWERR	LDA UERR
+:ERR	LDA UERR
 	JSR PRBYTE
 	RTS
 
@@ -77,10 +77,10 @@ SHOWERR	LDA UERR
 * actually iterate from the end to the beginning to print it
 * in-order.
 PRINT	LDY #11
-NEXTCH	LDA VOLNAME,Y
+:NEXT	LDA VOLNAME,Y
 	JSR COUT
 	DEY
-	BNE NEXTCH
+	BNE :NEXT
 
 EXIT	RTS
 
@@ -119,7 +119,7 @@ DISK	LDA #$00	; This means any volume number is acceptable.
 	JSR RWTS
 	BCC RETURN
 
-ERRHAND	LDA ERR
+:ERR	LDA ERR
 	STA UERR	; Set error info
 
 RETURN	RTS
