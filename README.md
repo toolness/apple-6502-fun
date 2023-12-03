@@ -108,3 +108,5 @@ my code and quickly try things out.
 * [Apple II BASIC Programming Manual (1978, PDF)](http://cini.classiccmp.org/pdf/Apple/Apple%20II%20Basic%20Programming%20Manual.pdf) - Jef Raskin's guide to BASIC programming. Assembly Lines assumes familiarity with BASIC, so this is useful as a refresher, among other things.
 
 * [Apple II DOS & Commands FAQ](https://mirrors.apple2.org.za/ftp.apple.asimov.net/documentation/programming/basic/Apple%20II%20DOS%20%26%20Commands%20FAQ.txt) - Apple DOS is some kind of weird BASIC with extra commands, this makes everything less confusing.
+
+* [Merlin manual (plaintext)](https://gswv.apple2.org.za/a2zine/Docs/MerlinManual.txt) - The plain text makes it easy for searching. Note that this is for the original Merlin from the early 1980s; the [Merlin32 manual](http://www.brutaldeluxe.fr/products/crossdevtools/merlin/) is also helpful.
