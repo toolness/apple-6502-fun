@@ -34,6 +34,11 @@ ODRIV	EQU $B7F8
 READ	EQU $01
 WRITE	EQU $02
 
+* The location of the buffer we'll read disk data into.
+BUFFER	EQU $1000
+* The location in the buffer of the disk volume name.
+VOLNAME	EQU $10AF
+
 * Configure our program to read from Track 2, Sector 2, which
 * contains the volume name of the disk.
 START	LDA #$02	; Track 2
@@ -44,9 +49,9 @@ START	LDA #$02	; Track 2
 	STA UDRIV
 	LDA #$60	; Slot 6 (multiplied by 16)
 	STA USLOT
-	LDA #$00	; Low byte of buffer
+	LDA #<BUFFER	; Low byte of buffer
 	STA BP
-	LDA #$10	; High byte of buffer
+	LDA #>BUFFER	; High byte of buffer
 	STA BP+1
 	LDA #READ
 	STA UCMD
@@ -56,7 +61,7 @@ START	LDA #$02	; Track 2
 * runs of this program.
 	LDY #$FF
 	LDA #0
-NEXTDL	STA $1000,Y
+NEXTDL	STA BUFFER,Y
 	DEY
 	BNE NEXTDL
 
@@ -68,9 +73,11 @@ SHOWERR	LDA UERR
 	JSR PRBYTE
 	RTS
 
-* Print the volume name.
+* Print the volume name. Note that it's stored in reverse, so we
+* actually iterate from the end to the beginning to print it
+* in-order.
 PRINT	LDY #11
-NEXTCH	LDA $10AF,Y	; Location of disk volume name in reverse
+NEXTCH	LDA VOLNAME,Y
 	JSR COUT
 	DEY
 	BNE NEXTCH
