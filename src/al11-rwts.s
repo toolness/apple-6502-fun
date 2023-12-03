@@ -30,9 +30,12 @@ ERR	EQU $B7F5
 OSLOT	EQU $B7F7
 ODRIV	EQU $B7F8
 
+* These are command codes for RWTS.
 READ	EQU $01
 WRITE	EQU $02
 
+* Configure our program to read from Track 2, Sector 2, which
+* contains the volume name of the disk.
 START	LDA #$02	; Track 2
 	STA CTRK
 	LDA #$02	; Sector 2
